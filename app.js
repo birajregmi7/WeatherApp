@@ -3,11 +3,12 @@ let containerInfo = document.querySelector('.sub-container-two')
 let url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`
 let appId = '55b2289d655aaab706595661745aa638'
 let btn = document.querySelector('.btn')
+
 btn.addEventListener('click', async function () {
     let inp = document.querySelector('.inp').value
-    console.log(inp)
     let wethArr = await weatherSearch(inp);
     show(wethArr)
+    document.querySelector('.inp').value = '';
 })
 function show(wethArr) {
     const weatherMain = wethArr.weather[0].main
@@ -50,17 +51,13 @@ async function weatherSearch(country) {
     } catch (e) {
         if (e.response) {
             if (e.response.status === 404) {
-                // Display an error message to the user
                 alert('City not found. Please enter a valid city name.');
             } else {
-                // Display a generic error message
                 alert('An error occurred while fetching weather data.');
             }
         } else {
-            // Display a generic error message if no response is received
             alert('An error occurred while fetching weather data.');
         }
-        // You can also log the error for debugging purposes
         console.error('Error:', e);
     }
 }
