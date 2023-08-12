@@ -1,0 +1,115 @@
+*{
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+/* background-color: #D5FFE4; */
+ padding: 0;
+ margin: 0;
+}
+
+.outer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 40rem;
+    width: 35rem;
+    background: linear-gradient(135deg,#6cf495, #025a2e);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1rem 1rem;
+    margin-top: 3rem;
+    box-shadow: 30px 30px 30px black;
+    z-index: 1;
+}
+.container:hover{
+    background: linear-gradient(135deg, #30cd5f, #187747)
+}
+
+.sub-container{
+    height: 30rem;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0 0 1rem 1rem;
+}
+.search-main{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.btn{
+    background-color: white;
+    border-radius: 2rem;
+    height: 3.1rem ;
+    width: 3.1rem;
+    margin-left: 1.4rem;
+}
+.btn:hover{
+    background-color: rgb(198, 246, 209);
+}
+.inp{
+    height: 3rem;
+    width: 20rem;
+    background-color: white;
+    padding-left: 1rem;
+    border-radius: 1.2rem;
+}
+.inp:hover{
+    background-color: rgb(182, 231, 198) ;
+}
+
+.info-main{
+    display: flex;
+    flex-direction: row;
+}
+.humidity{
+    padding-right: 5px;
+}
+.windspeed{
+    padding-right: 5px;
+}
+.images{
+    height: 13rem;
+    width: 13rem;
+}
+
+.humidity-main{
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+    align-items: center;
+}
+.humidity-sub{
+    display: flex;
+}
+.humidity{
+    padding-left: 0.5rem;
+}
+.windspeed-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3rem;
+}
+.windspeed-sub{
+    display: flex;
+}
+.windspeed{
+    margin-left: 0.5rem;
+}
+.temperature{
+    font-size: 2.4rem;
+    font-weight: 900;
+}
+.description{
+    font-size: 1.2rem;
+}
+.sub-container-two{
+    display: none;
+}
